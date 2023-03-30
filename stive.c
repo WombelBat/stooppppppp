@@ -36,3 +36,55 @@ void deleteStack(NODE**top){
 		free(temp);
 	}
 }
+
+void checkParat()
+{
+    NODE *head, *curent;
+    head=malloc(sizeof(NODE));
+    head->next=NULL;
+    char *c;
+    int i=1,chf=0,chs=0;
+    printf("wrtite text with c()");
+    gets(c);
+    head->val=c[0];
+    do
+    {
+        if(curent->val=='(')
+        {
+            if(chs==1)
+                {
+                      printf("nu e corect la %d,%p",i+1,curent);
+                     chf=0;
+                    chs=0;
+                }
+            else if(chf==0)
+                {
+                   chf=1;
+                }
+        }
+        if(curent->val==')')
+        {
+            if(chf==1)
+                {
+                    chf=0;
+                    chs=0;
+                }
+            else if(chf==0)
+                {
+                    printf("nu e corect la %d,%p",i+1,curent);
+                     chf=0;
+                    chs=0;
+                }
+
+        }
+        addAtEnd(curent,c[i]);
+        /* code */
+        curent=curent->next;
+
+
+        i++;
+    } while (c[i]!='\0');
+    
+
+
+}
