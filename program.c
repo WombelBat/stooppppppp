@@ -5,7 +5,8 @@ int main()
 {
     NODE *a=malloc(sizeof(NODE));
     a->next=NULL;
-    addAtBeginning(&a,5);
+    a->val='n';
+    addAtEnd(&a,'h');
     
     display(a);
     printf("%d",isEmpty(&a));
