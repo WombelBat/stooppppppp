@@ -15,7 +15,7 @@ int isEmptyQ(Queue*q);
 Data deQueue(Queue*q);
 void enQueue(Queue*q, Data v);
 Queue* createQueue();
-
+void reverseQueue(Queue **head);
 
 
 #endif

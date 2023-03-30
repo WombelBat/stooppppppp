@@ -44,3 +44,24 @@ void deleteQueue(Queue*q){
 	}
 	free(q);
 }	
+void reverseQueue(Queue**head)
+{
+	Queue *temp=createQueue();
+	Queue *curent=createQueue();
+	curent=*head;
+	temp=curent->front;
+	Data val=curent->front->val;
+	Data last=curent->rear->val;
+	while(curent!=curent->rear)
+	{
+		curent->val=curent->next->val;
+		curent->front->val=val;
+		curent->rear->val=last;
+		curent=curent->next;
+	}
+	curent->front->val=curent->rear->val;
+	curent->rear->val=val;
+
+
+
+}
