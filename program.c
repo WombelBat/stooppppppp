@@ -9,7 +9,8 @@ int main()
     addAtEnd(&a,'h');
     
     display(a);
-    printf("%d",isEmpty(&a));
+    //printf("%d",isEmpty(&a));
+    checkParat();
 
     return 0;
 }
