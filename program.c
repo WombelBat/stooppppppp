@@ -1,16 +1,14 @@
-#include "lib.h"
-#include "stive.h"
 
+#include "cozi.h"
 int main()
 {
     NODE *a=malloc(sizeof(NODE));
     a->next=NULL;
     a->val='n';
     addAtEnd(&a,'h');
-    
     display(a);
     //printf("%d",isEmpty(&a));
-    checkParat();
+   checkParat();
 
     return 0;
 }

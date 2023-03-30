@@ -1,18 +1,4 @@
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-
-
-typedef int Data;
-
-typedef struct Node
-{
-	Data val;
-	struct Node *next;
-} NODE;
-
+#include "lib.h"
 void addAtBeginning(NODE **head, Data v)
 {
 	NODE *newNODE = (NODE *)malloc(sizeof(NODE));

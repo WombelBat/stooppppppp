@@ -1,4 +1,4 @@
-#include "lib.h"
+#include "stive.h"
 
 Data top(NODE *top){
 	if (isEmpty(top)) return INT_MIN;

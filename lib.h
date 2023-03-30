@@ -1,4 +1,5 @@
-
+#ifndef LIB_H_
+#define LIB_H_
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -13,41 +14,14 @@ typedef struct Node
 	struct Node *next;
 } NODE;
 
-void addAtBeginning(NODE **head, Data v)
-{
-	NODE *newNODE = (NODE *)malloc(sizeof(NODE));
-	newNODE->val = v;
-	newNODE->next = *head;
-	*head = newNODE;
-}
+void addAtBeginning(NODE **head, Data v);
 
-void addAtEnd(NODE **head, Data v)
-{
-	NODE *aux = *head;
-	NODE *newNODE = (NODE *)malloc(sizeof(NODE));
-	newNODE->val = v;
-	if (*head == NULL)
-		addAtBeginning(&*head, v);
-	else
-	{
-		while (aux->next != NULL)
-			aux = aux->next;
-		aux->next = newNODE;
-		newNODE->next = NULL;
-	}
-}
-
-void display(NODE *head)
-{
-	while (head != NULL)
-	{
-		printf("%c ", head->val);
-		head = head->next;
-	}
-	printf("\n");
-}
+void addAtEnd(NODE **head, Data v);
+void display(NODE *head);
 // int getsizeNODE()
 // {
 
 //     return sizeof(NODE);
 // }
+
+#endif

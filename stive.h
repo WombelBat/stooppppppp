@@ -1,37 +1,14 @@
+#ifndef STIVE_H_
+#define STIVE_H_
+
 #include "lib.h"
-Data top(NODE *top){
-	if (isEmpty(top)) return INT_MIN;
-	return top->val;
-} 
 
-void push(NODE**top, Data v) {
-	NODE* newNODE=(NODE*)malloc(sizeof(NODE));
-	newNODE->val=v;
-	newNODE->next=*top;
-	*top=newNODE;
-}
 
-Data pop(NODE**top) {
-	if (isEmpty(*top)) return INT_MIN;
-	NODE *temp=(*top); 		
-	Data aux=temp->val;	
-	*top=(*top)->next;      		
-	free(temp);
-	return aux;
-}
+Data top(NODE *top);
+void push(NODE**top, Data v);
+Data pop(NODE**top);
+int isEmpty(NODE*top);
+void deleteStack(NODE**top);
+void checkParat();
 
-int isEmpty(NODE*top){
-	return top==NULL;
-}
-	
-void deleteStack(NODE**top){
-	
-
-	NODE  *temp;
-	while (!isEmpty(*top))
-	{
-		temp=*top;
-		*top=(*top)->next;
-		free(temp);
-	}
-}
+#endif
